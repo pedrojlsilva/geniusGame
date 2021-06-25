@@ -61,7 +61,7 @@ telaDificuldade:
 telaInstrucoes:
 
     call cleanTela
-    call corLetra
+    mov bl, 0xe
     ;posicionar título
     mov dl, 15
     mov dh, 1
@@ -139,7 +139,7 @@ telaInstrucoes:
 
 telaCreditos:
     call cleanTela
-    call corLetra
+    mov bl, 0xe
     ;posicionar título
     mov dl, 15
     mov dh, 4
@@ -186,7 +186,7 @@ telaCreditos:
 telaMenu:
 
     
-    call corLetra
+    mov bl, 0xe
     ;posicionar título
     mov dl, 7
     mov dh, 4
@@ -227,18 +227,6 @@ configModovideo:
     mov bl, 0xe ;cor
     int 10h
 
-    ret
-
-corLetra:
-    mov ah, 0xe
-	mov bh, 0
-    mov bl, 0xe
-	int 10h
-    ret
-
-verSeTemEntrada:
-    mov ah, 1 ;vê o status da entrada 
-    int 16h 
     ret
 
 lerChar:
