@@ -316,12 +316,9 @@ drawGeniusSprite:
 	
 
 	.printLinha:
-		lodsb	;vai pegar oq ta na si, que no caso eh o sprite
+		lodsb	;aponta para o caractere da sprite, carrega e incrementa si
         cmp al, 13
-        jne .pulaCor
-        mov al, [cor] ; cor branca pro pixel
-            .pulaCor:
-		    mov [es:di], al	;es+deslocamento = primeiro pixel da tela + quantos pixels eu vou pular pra chegar no lugar q eu quero e al tem a cor que eu vou colocar. esse eh o print
+		mov [es:di], al	;es+deslocamento = primeiro pixel da tela + quantos pixels eu vou pular pra chegar no lugar q eu quero e al tem a cor que eu vou colocar. esse eh o print
 
 		inc di	; incremendo o di pra ser a proxima posicao do pixel que vai ser printado
 		inc cx	; incremento o contador de colunas
@@ -330,11 +327,11 @@ drawGeniusSprite:
 	
 	.proxLinha:
 		xor cx, cx	; zera o contador de colunas
-		sub di, [spriteW]	; subtrai as colunas pra voltar pro começo da linha
-		add di, 320	; vai pra linha abaixo
-		inc bx	; incrementa quantas linhas printou
-		cmp bx, [spriteH]	; terminei de printar as linhas?
-		jne .printLinha	; se nao terminou continua imprimindo
+		sub di, [spriteW]	; retorna para a primeira coluna
+		add di, 320	; vai pra proxima linha
+		inc bx	; contador de linhas printadas
+		cmp bx, [spriteH]	;checando se terminou de printar todas as linhas da imagem
+		jne .printLinha	; se nao terminou, vai pra proxima linha
 
 	.end:
 		xor ax,ax
