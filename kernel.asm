@@ -57,6 +57,56 @@ data:
 	spriteW dw 0
 	spriteH dw 0
     cor db 0
+
+
+%macro margin 3
+   
+        mov cx, %2 ;col
+        mov dx, %1 ;row
+        mov ah, 0ch ; put pixel
+        mov al, 15
+        loop%3:
+            inc cx 
+            int 10h
+            cmp cx, %2 + 58
+            jne loop%3
+
+        
+        
+        mov cx, %2 ;col
+        mov dx, %1  ;row
+        mov ah, 0ch ; put pixel
+        mov al, 15
+        loop%3%3: 
+            inc dx
+            int 10h
+            cmp dx, %1 + 58
+            jne loop%3%3
+
+        
+        mov cx, %2 + 58 ;col
+        mov dx, %1  ;row
+        mov ah, 0ch ; put pixel
+        mov al, 15
+        loop%3%3%3:
+            inc dx
+            int 10h
+            cmp dx, %1 + 58
+            jne loop%3%3%3
+
+        
+        mov cx, %2 ;col
+        mov dx, %1 + 58  ;row
+        mov ah, 0ch ; put pixel
+        mov al, 15
+        loop%3%3%3%3: 
+            inc cx
+            int 10h
+            cmp cx, %2 + 58
+            jne loop%3%3%3%3
+
+
+%endmacro
     
 
 start:
@@ -816,16 +866,18 @@ ledY:
         mov al, 14
 
         loopY:
-        inc cx
-        int 10h
-        cmp cx, 104
-        JNE loopY
+            inc cx
+            int 10h
+            cmp cx, 104
+            jne loopY
 
         mov cx, 46  ; reset to start of col
         inc dx      ;next row
         cmp dx, 104
-        JNE loopY
-        
+        jne loopY
+
+        margin 46, 46, 1
+
        
 
     ret
@@ -842,17 +894,16 @@ ledR:
         inc cx
         int 10h
         cmp cx, 154
-        JNE loopR
+        jne loopR
 
         mov cx, 96  ; reset to start of col
         inc dx      ;next row
         cmp dx, 104
-        JNE loopR
+        jne loopR
 
-        xor cx, cx
-        xor dx, dx
-        xor ax, ax
+        margin 46, 96, 5
 
+       
         
     ret
 
@@ -867,12 +918,14 @@ ledG:
         inc cx
         int 10h
         cmp cx, 104
-        JNE loopG
+        jne loopG
 
         mov cx, 46  ; reset to start of col
         inc dx      ;next row
         cmp dx, 154
-        JNE loopG
+        jne loopG
+
+        margin 96, 46, 9
 
     
 
@@ -889,16 +942,18 @@ ledB:
         inc cx
         int 10h
         cmp cx, 154
-        JNE loopB
+        jne loopB
 
         mov cx, 96  ; reset to start of col
         inc dx      ;next row
         cmp dx, 154
-        JNE loopB
+        jne loopB
 
         xor cx, cx
         xor dx, dx
         xor ax, ax
+
+        margin 96, 96, 13
 
     
 
@@ -924,12 +979,12 @@ jogoVisu:
         inc cx
         int 10h
         cmp cx, 100
-        JNE colcount
+        jne colcount
 
         mov cx, 50  ; reset to start of col
         inc dx      ;next row
         cmp dx, 100
-        JNE colcount
+        jne colcount
 
     
 
@@ -944,12 +999,12 @@ jogoVisu:
     inc cx
     int 10h
     cmp cx, 150
-    JNE _colcount
+    jne _colcount
 
     mov cx, 100  ; reset to start of col
     inc dx      ;next row
     cmp dx, 100
-    JNE _colcount
+    jne _colcount
 
 
 
@@ -964,12 +1019,12 @@ jogoVisu:
         inc cx
         int 10h
         cmp cx, 100
-        JNE ocolcount
+        jne ocolcount
 
         mov cx, 50  ; reset to start of col
         inc dx      ;next row
         cmp dx, 150
-        JNE ocolcount
+        jne ocolcount
 
 
 
@@ -983,12 +1038,12 @@ jogoVisu:
         inc cx
         int 10h
         cmp cx, 150
-        JNE .colcount
+        jne .colcount
 
         mov cx, 100  ; reset to start of col
         inc dx      ;next row
         cmp dx, 150
-        JNE .colcount
+        jne .colcount
 
 
-    	ret
+    ret
