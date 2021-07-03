@@ -40,16 +40,24 @@ data:
     acertouMsg db 'ACERTOU!! :D Vamos la!', 0
     proximoMsg db '1 - Proximo Nivel', 0
     suaVezMsg db 'SUA VEZ!', 0
-    sairMsg DB '3 - Sair', 0
+    sairMsg db '3 - Sair', 0
+    vencedorMsg db 'parabens, voce venceu! :D', 0
 
     
     img db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 0, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 0, 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 8, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 8, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 6, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 8, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 6, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 6, 14, 14, 14, 14, 14, 14, 14, 14, 14, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 14, 14, 14, 14, 14, 14, 14, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 6, 6, 14, 14, 14, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+    vencedorimg db 0, 0, 8, 1, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12, 12, 0, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 0, 0, 0, 9, 9, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 12, 12, 12, 4, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 7, 12, 0, 0, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 12, 12, 12, 12, 4, 11, 8, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12, 12, 0, 0, 0, 0, 0, 0, 7, 7, 4, 1, 9, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 12, 12, 12, 8, 9, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12, 12, 12, 8, 0, 0, 0, 0, 0, 12, 7, 12, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 12, 0, 4, 12, 12, 8, 9, 9, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12, 12, 0, 0, 0, 0, 0, 0, 8, 12, 12, 1, 9, 9, 9, 8, 8, 0, 0, 0, 0, 8, 0, 0, 0, 12, 7, 7, 8, 0, 12, 12, 12, 0, 8, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 0, 0, 0, 0, 0, 0, 0, 12, 12, 12, 0, 9, 9, 9, 9, 9, 9, 0, 0, 6, 14, 0, 0, 0, 0, 12, 12, 0, 0, 4, 12, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 4, 4, 12, 12, 4, 0, 0, 8, 9, 9, 9, 9, 0, 6, 14, 14, 14, 0, 6, 6, 8, 0, 0, 0, 0, 12, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12, 8, 8, 12, 12, 12, 12, 4, 0, 0, 0, 0, 8, 1, 9, 8, 1, 0, 14, 14, 6, 6, 6, 6, 6, 6, 0, 0, 0, 12, 12, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 12, 4, 0, 8, 0, 8, 0, 13, 0, 0, 11, 8, 9, 9, 0, 0, 0, 0, 0, 6, 0, 6, 6, 6, 6, 6, 6, 6, 0, 12, 12, 8, 0, 8, 8, 8, 0, 0, 0, 0, 0, 4, 4, 0, 4, 0, 0, 0, 12, 12, 0, 0, 0, 0, 0, 0, 0, 11, 1, 9, 8, 8, 0, 0, 0, 0, 0, 0, 0, 6, 12, 6, 6, 6, 6, 6, 6, 12, 12, 4, 0, 8, 9, 9, 8, 0, 0, 0, 4, 12, 12, 12, 4, 0, 0, 0, 4, 12, 4, 0, 0, 0, 0, 0, 0, 8, 9, 8, 0, 0, 0, 0, 0, 0, 0, 0, 6, 6, 14, 6, 6, 6, 6, 6, 6, 12, 12, 8, 0, 8, 9, 9, 8, 0, 0, 0, 12, 12, 12, 0, 8, 12, 0, 0, 0, 8, 4, 0, 0, 0, 0, 0, 0, 0, 0, 9, 9, 9, 9, 9, 9, 1, 0, 0, 6, 14, 14, 14, 6, 6, 6, 6, 6, 12, 12, 12, 0, 8, 8, 0, 0, 0, 0, 8, 12, 7, 12, 0, 0, 0, 12, 4, 0, 4, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 8, 6, 14, 7, 14, 14, 6, 6, 6, 14, 12, 12, 12, 6, 6, 0, 0, 0, 0, 0, 15, 12, 7, 7, 5, 0, 0, 8, 8, 8, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 9, 6, 12, 14, 7, 12, 12, 14, 6, 6, 14, 12, 12, 12, 14, 14, 6, 0, 0, 0, 0, 0, 12, 7, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 9, 8, 6, 14, 7, 7, 12, 12, 12, 14, 14, 14, 12, 12, 12, 12, 14, 14, 6, 0, 0, 0, 0, 8, 7, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 9, 8, 12, 14, 7, 12, 12, 12, 12, 14, 14, 12, 12, 12, 12, 14, 14, 14, 14, 6, 0, 0, 0, 4, 12, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 8, 8, 7, 14, 7, 12, 12, 12, 12, 12, 14, 14, 12, 12, 12, 14, 14, 14, 14, 14, 14, 6, 0, 0, 12, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 9, 8, 0, 8, 7, 7, 12, 12, 12, 12, 12, 12, 14, 14, 12, 12, 14, 14, 14, 14, 14, 14, 14, 14, 6, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 8, 8, 8, 8, 0, 0, 0, 0, 0, 0, 0, 0, 8, 7, 9, 7, 7, 12, 12, 12, 12, 12, 12, 14, 14, 12, 14, 14, 14, 14, 14, 14, 14, 14, 14, 6, 14, 0, 15, 0, 8, 8, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 8, 9, 9, 9, 7, 12, 12, 12, 12, 12, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 8, 8, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 7, 9, 0, 0, 0, 0, 0, 0, 0, 0, 6, 7, 9, 9, 9, 7, 12, 12, 12, 12, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 7, 7, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 8, 8, 8, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 14, 7, 9, 9, 9, 7, 7, 12, 12, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 7, 9, 9, 9, 9, 9, 9, 9, 8, 8, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 4, 5, 0, 6, 14, 7, 7, 9, 9, 9, 7, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 9, 9, 9, 9, 9, 9, 7, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12, 12, 4, 0, 12, 7, 12, 12, 9, 9, 5, 5, 7, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 7, 9, 9, 7, 7, 14, 14, 14, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 12, 12, 4, 6, 14, 7, 12, 12, 12, 9, 5, 9, 9, 7, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 7, 12, 14, 14, 14, 14, 14, 14, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 4, 4, 0, 12, 14, 12, 12, 12, 12, 12, 5, 9, 9, 9, 7, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 12, 14, 14, 14, 14, 12, 12, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 14, 7, 12, 12, 12, 12, 12, 7, 9, 9, 9, 9, 7, 7, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 12, 14, 14, 14, 12, 6, 6, 0, 8, 6, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 8, 14, 7, 12, 12, 12, 12, 12, 14, 7, 9, 9, 9, 9, 13, 7, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 6, 6, 12, 12, 6, 6, 6, 14, 14, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 7, 12, 12, 12, 12, 12, 14, 14, 14, 7, 9, 9, 9, 13, 13, 7, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 6, 6, 6, 6, 6, 6, 6, 14, 14, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 9, 7, 12, 12, 12, 12, 12, 14, 14, 14, 14, 7, 13, 13, 13, 13, 13, 7, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 6, 6, 6, 6, 6, 6, 0, 14, 8, 8, 0, 6, 6, 6, 14, 0, 0, 0, 0, 8, 9, 7, 7, 12, 12, 12, 12, 14, 14, 14, 14, 14, 14, 7, 13, 13, 13, 13, 7, 15, 14, 14, 14, 14, 14, 14, 12, 6, 6, 6, 6, 6, 0, 6, 0, 8, 0, 0, 0, 6, 12, 12, 0, 0, 0, 0, 0, 7, 9, 9, 7, 14, 12, 12, 14, 14, 14, 14, 14, 14, 14, 14, 7, 13, 13, 13, 13, 15, 15, 14, 14, 14, 14, 12, 8, 6, 6, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 12, 14, 6, 0, 0, 0, 6, 7, 9, 9, 9, 7, 14, 12, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 7, 13, 15, 15, 13, 7, 7, 7, 6, 6, 6, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12, 8, 15, 0, 0, 0, 6, 7, 7, 9, 9, 9, 7, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 7, 15, 13, 7, 7, 5, 5, 8, 8, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 12, 12, 9, 9, 9, 9, 7, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 7, 8, 5, 5, 8, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 6, 6, 0, 0, 0, 0, 0, 0, 0, 6, 7, 12, 12, 12, 9, 9, 9, 9, 7, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 6, 6, 6, 8, 0, 0, 8, 8, 9, 9, 0, 0, 0, 0, 0, 0, 6, 14, 12, 6, 0, 0, 0, 0, 0, 0, 6, 12, 12, 12, 12, 7, 9, 9, 9, 9, 7, 14, 14, 14, 14, 14, 14, 14, 14, 14, 6, 6, 6, 6, 0, 0, 0, 0, 11, 8, 9, 9, 8, 0, 0, 0, 0, 0, 6, 12, 12, 0, 0, 0, 0, 0, 0, 8, 7, 12, 12, 12, 14, 14, 7, 9, 9, 13, 13, 7, 7, 14, 14, 14, 14, 14, 6, 6, 6, 6, 0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 11, 0, 0, 0, 0, 0, 15, 0, 6, 0, 0, 0, 0, 0, 13, 8, 7, 12, 12, 14, 14, 14, 14, 7, 7, 13, 13, 13, 13, 7, 15, 14, 14, 6, 6, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 7, 12, 12, 14, 14, 14, 14, 14, 14, 7, 13, 13, 13, 13, 7, 8, 8, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 0, 0, 0, 8, 9, 9, 7, 14, 14, 14, 14, 14, 14, 14, 14, 14, 7, 7, 5, 8, 8, 0, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 7, 7, 8, 0, 0, 0, 8, 9, 9, 9, 7, 14, 14, 14, 14, 14, 14, 14, 14, 14, 6, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 7, 7, 7, 0, 0, 0, 6, 7, 9, 9, 9, 7, 14, 14, 14, 14, 14, 14, 6, 6, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12, 7, 8, 0, 0, 0, 6, 12, 7, 9, 9, 13, 7, 14, 14, 14, 6, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 0, 0, 0, 0, 6, 14, 7, 13, 13, 13, 7, 7, 8, 0, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12, 14, 7, 7, 7, 8, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 6, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
     ; tamanho do sprite
+    vencedorSpriteWidth dw 48
+	vencedorSpriteHeigth dw 48
+
 	geniusSpriteWidth dw 51
 	geniusSpriteHeigth dw 45
 	; posicao do sprite na tela
+    vencedorSpriteX dw 80
+	vencedorSpriteY dw 270
+
 	geniusSpriteX dw 70
-	geniusSpriteY dw 270
+	geniusSpriteY dw 280
     ; drawX e Y sao a posicao x e y na tela
 	drawX dw 0
 	drawY dw 0
@@ -163,7 +171,209 @@ telaDificuldade:
     jmp start
 
 
+telaVencedor:
 
+    call cleanTela
+    
+    mov dl, 9
+    mov dh, 5
+    call andarEspaco
+    mov si, vencedorMsg
+    call printString
+    mov bl, 0xe
+    
+    mov si, vencedorimg
+
+    mov ax, [vencedorSpriteX] 
+	mov [drawX], ax
+
+	mov ax, [vencedorSpriteY]
+	mov [drawY], ax
+
+	mov ax, [vencedorSpriteWidth]
+	mov [spriteW], ax
+
+	mov ax, [vencedorSpriteHeigth]
+	mov [spriteH], ax
+    call drawSprite
+
+    
+    call delay1s
+    call delay1s
+    call delay1s
+    jmp start 
+
+telaInstrucoes:
+
+    call cleanTela
+    mov bl, 0xe
+    ;posicionar título
+    mov dl, 15
+    mov dh, 1
+    call andarEspaco
+    mov si, instrucoesTitulo ;amarelo
+    call printString
+    
+    mov dl, 2
+    add dh, 4
+    mov bl, 0x9 ;cor verde azul claro
+    call andarEspaco
+    mov si, linha1 
+    call printString
+    
+    add dh, 1
+    call andarEspaco
+    mov si, linha2
+    call printString
+
+    add dh, 1
+    call andarEspaco
+    mov si, linha3
+    call printString
+
+    add dh, 1
+    call andarEspaco
+    mov si, linha4
+    call printString
+
+    add dh, 1
+    call andarEspaco
+    mov si, linha5
+    call printString
+
+    mov dl, 13
+    add dh, 3
+    mov bl, 0x4
+    call andarEspaco
+    mov si, linha6
+    call printString
+
+    add dh, 1
+    call andarEspaco
+    mov bl, 0xa
+    mov si, linha7
+    call printString
+
+    add dh, 1
+    call andarEspaco
+    mov bl, 0x9
+    mov si, linha8
+    call printString
+
+    add dh, 1
+    call andarEspaco
+    mov bl, 0xe
+    mov dl, 15
+    mov si, linha9
+    call printString
+
+    mov dl, 9
+    add dh, 3
+    call andarEspaco
+    mov bl, 0x5
+    mov si, creditosSair
+    call printString
+    
+    loopInst:
+        call lerChar
+        cmp al, '1'
+        jne loopInst  
+    
+    jmp start
+
+
+telaCreditos:
+    call cleanTela
+    mov bl, 0xe
+    ;posicionar título
+    mov dl, 15
+    mov dh, 4
+    call andarEspaco
+    mov si, creditosTitulo ;amarelo
+    call printString
+    
+    mov dl, 5
+    mov dh, 15
+    mov bl, 0xa ;cor verde claro
+    call andarEspaco
+    mov si, gabi 
+    call printString
+    
+    mov dl, 6
+    add dh, 2
+    call andarEspaco
+    mov bl, 0x4 ;cor vermelho
+    mov si, marcos
+    call printString
+    
+    mov dl, 5
+    add dh, 2
+    call andarEspaco
+    mov bl, 0x9 ;cor azul claro
+    mov si, pedro
+    call printString
+
+    mov dl, 9
+    add dh, 3
+    call andarEspaco
+    mov bl, 0xe ;cor amarelo
+    mov si, creditosSair
+    call printString
+
+    
+    loop:
+        call lerChar
+        cmp al, '1'
+        jne loop  
+    
+    jmp start
+
+telaMenu:
+
+    
+    mov bl, 0xe
+    ;posicionar título
+    mov dl, 7
+    mov dh, 5
+    call andarEspaco
+    mov si, titulo ;amarelo
+    call printString
+    mov si, img
+    ; confiurando parametros para sprite do genius
+    mov ax, [geniusSpriteX]
+	mov [drawX], ax
+
+	mov ax, [geniusSpriteY]
+	mov [drawY], ax
+
+	mov ax, [geniusSpriteWidth]
+	mov [spriteW], ax
+
+	mov ax, [geniusSpriteHeigth]
+	mov [spriteH], ax
+    call drawSprite
+    
+    mov dl, 15
+    mov dh, 15
+    mov bl, 0xa ;cor verde claro
+    call andarEspaco
+    mov si, jogar 
+    call printString
+    
+    sub dl, 8
+    add dh, 2
+    call andarEspaco
+    mov bl, 0x4 ;cor vermelho
+    mov si, instrucoes
+    call printString
+    
+    add dl, 3
+    add dh, 2
+    call andarEspaco
+    mov bl, 0x9 ;cor azul claro
+    mov si, creditos
+    call printString
+    ret
 
 
 facil: 
@@ -176,9 +386,8 @@ facil:
     call level4
     call acertou
     call level5
-    call acertou
-    ;;tela de vencedror! (pra ser criada)
-    ret
+    jmp telaVencedor
+    
 
 medio:
     call level6
@@ -190,11 +399,102 @@ medio:
     call level9
     call acertou
     call level10
-    call acertou
-    ;;;;tela de vencedor
+    jmp telaVencedor
+
+level1:
+
+    call init 
+
+    call piscaRed
+    call piscaRed
+    call svez
+    call validaR
+    call validaR
+   
+    ret
+
+
+level2:
+    
+    call init 
+
+    call piscaRed
+    call piscaBlue
+    call piscaRed
+    call piscaBlue
+
+    call svez
+
+    call validaR
+    call validaB
+    call validaR
+    call validaB
+
+
 
     ret
 
+
+level3:
+    
+    call init 
+
+    call piscaBlue
+    call piscaBlue
+    call piscaRed
+    call piscaBlue
+    call piscaBlue
+    call svez
+    call validaB
+    call validaB
+    call validaR
+    call validaB
+    call validaB
+
+    ret
+
+level4:
+    
+    call init 
+
+    call piscaRed
+    call piscaBlue
+    call piscaRed
+    call piscaBlue
+    call piscaBlue
+    call piscaRed
+    call svez
+    call validaR
+    call validaB
+    call validaR
+    call validaB
+    call validaB
+    call validaR
+    
+    
+    ret
+
+level5:
+    
+    call init 
+
+    call piscaRed
+    call piscaRed
+    call piscaBlue
+    call piscaRed
+    call piscaBlue
+    call piscaBlue
+    call piscaRed
+    call svez
+    call validaR
+    call validaR
+    call validaB
+    call validaR
+    call validaB
+    call validaB
+    call validaR
+
+    ret
 level6:
     call init
 
@@ -396,100 +696,6 @@ validaB:
 
     ret
 
-level1:
-
-    call init 
-
-    call piscaRed
-    call piscaRed
-    call svez
-    call validaR
-    call validaR
-   
-    ret
-
-
-level2:
-    
-    call init 
-
-    call piscaRed
-    call piscaBlue
-    call piscaRed
-    call piscaBlue
-
-    call svez
-
-    call validaR
-    call validaB
-    call validaR
-    call validaB
-
-
-
-    ret
-
-
-level3:
-    
-    call init 
-
-    call piscaBlue
-    call piscaBlue
-    call piscaRed
-    call piscaBlue
-    call piscaBlue
-    call svez
-    call validaB
-    call validaB
-    call validaR
-    call validaB
-    call validaB
-
-    ret
-
-level4:
-    
-    call init 
-
-    call piscaRed
-    call piscaBlue
-    call piscaRed
-    call piscaBlue
-    call piscaBlue
-    call piscaRed
-    call svez
-    call validaR
-    call validaB
-    call validaR
-    call validaB
-    call validaB
-    call validaR
-    
-    
-    ret
-
-level5:
-    
-    call init 
-
-    call piscaRed
-    call piscaRed
-    call piscaBlue
-    call piscaRed
-    call piscaBlue
-    call piscaBlue
-    call piscaRed
-    call svez
-    call validaR
-    call validaR
-    call validaB
-    call validaR
-    call validaB
-    call validaB
-    call validaR
-
-    ret
 
 
 
@@ -498,165 +704,8 @@ level5:
 
 
 
-telaInstrucoes:
-
-    call cleanTela
-    mov bl, 0xe
-    ;posicionar título
-    mov dl, 15
-    mov dh, 1
-    call andarEspaco
-    mov si, instrucoesTitulo ;amarelo
-    call printString
-    
-    mov dl, 2
-    add dh, 4
-    mov bl, 0x9 ;cor verde azul claro
-    call andarEspaco
-    mov si, linha1 
-    call printString
-    
-    add dh, 1
-    call andarEspaco
-    mov si, linha2
-    call printString
-
-    add dh, 1
-    call andarEspaco
-    mov si, linha3
-    call printString
-
-    add dh, 1
-    call andarEspaco
-    mov si, linha4
-    call printString
-
-    add dh, 1
-    call andarEspaco
-    mov si, linha5
-    call printString
-
-    mov dl, 13
-    add dh, 3
-    mov bl, 0x4
-    call andarEspaco
-    mov si, linha6
-    call printString
-
-    add dh, 1
-    call andarEspaco
-    mov bl, 0xa
-    mov si, linha7
-    call printString
-
-    add dh, 1
-    call andarEspaco
-    mov bl, 0x9
-    mov si, linha8
-    call printString
-
-    add dh, 1
-    call andarEspaco
-    mov bl, 0xe
-    mov dl, 15
-    mov si, linha9
-    call printString
-
-    mov dl, 9
-    add dh, 3
-    call andarEspaco
-    mov bl, 0x5
-    mov si, creditosSair
-    call printString
-    
-    loopInst:
-        call lerChar
-        cmp al, '1'
-        jne loopInst  
-    
-    jmp start
 
 
-telaCreditos:
-    call cleanTela
-    mov bl, 0xe
-    ;posicionar título
-    mov dl, 15
-    mov dh, 4
-    call andarEspaco
-    mov si, creditosTitulo ;amarelo
-    call printString
-    
-    mov dl, 5
-    mov dh, 15
-    mov bl, 0xa ;cor verde claro
-    call andarEspaco
-    mov si, gabi 
-    call printString
-    
-    mov dl, 6
-    add dh, 2
-    call andarEspaco
-    mov bl, 0x4 ;cor vermelho
-    mov si, marcos
-    call printString
-    
-    mov dl, 5
-    add dh, 2
-    call andarEspaco
-    mov bl, 0x9 ;cor azul claro
-    mov si, pedro
-    call printString
-
-    mov dl, 9
-    add dh, 3
-    call andarEspaco
-    mov bl, 0xe ;cor amarelo
-    mov si, creditosSair
-    call printString
-
-    
-    loop:
-        call lerChar
-        cmp al, '1'
-        jne loop  
-    
-    jmp start
-
-telaMenu:
-
-    
-    mov bl, 0xe
-    ;posicionar título
-    mov dl, 7
-    mov dh, 5
-    call andarEspaco
-    mov si, titulo ;amarelo
-    call printString
-    mov si, img
-    call drawGeniusSprite
-    
-    mov dl, 15
-    mov dh, 15
-    mov bl, 0xa ;cor verde claro
-    call andarEspaco
-    mov si, jogar 
-    call printString
-    
-    sub dl, 8
-    add dh, 2
-    call andarEspaco
-    mov bl, 0x4 ;cor vermelho
-    mov si, instrucoes
-    call printString
-    
-    add dl, 3
-    add dh, 2
-    call andarEspaco
-    mov bl, 0x9 ;cor azul claro
-    mov si, creditos
-    call printString
-    ret
 
 configModovideo:
     ;modo video
@@ -705,19 +754,9 @@ cleanTela:
 
 
 
-drawGeniusSprite:
+drawSprite:
 
-    mov ax, [geniusSpriteX]
-	mov [drawX], ax
-
-	mov ax, [geniusSpriteY]
-	mov [drawY], ax
-
-	mov ax, [geniusSpriteWidth]
-	mov [spriteW], ax
-
-	mov ax, [geniusSpriteHeigth]
-	mov [spriteH], ax
+    
 
     xor ax,ax
     xor bx,bx
@@ -811,9 +850,6 @@ acertou:
     call andarEspaco
     mov si, sairMsg
     call printString
-
-
-
 
     .espera1:
         call lerChar
