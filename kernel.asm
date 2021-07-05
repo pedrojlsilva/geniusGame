@@ -30,17 +30,19 @@ data:
     linha9 db 'y para amarelo', 0
  
     ;telaDificuldade
+    linha13 db 'ESCOLHA A DIFICULDADE', 0
     linha10 db 'FACIL (press F)', 0
     linha11 db 'MEDIO (press M)', 0
-    linha12 db 'Retornar (press 1)', 0
+    linha12 db 'RETORNAR (press 1)', 0
 
     
-    errouMsg db ' ERROU! :( Tente novamente) ', 0
+    errouMsg db ' ERROU! :( ', 0
+    errouMsg1 db 'Tente novamente!', 0
     voltarMsg db 'PRESS 1', 0
     acertouMsg db 'ACERTOU!! :D Vamos la!', 0
-    proximoMsg db '1 - Proximo Nivel', 0
+    proximoMsg db '1 - Continuar', 0
     suaVezMsg db 'SUA VEZ!', 0
-    sairMsg db '3 - Sair', 0
+    sairMsg db '2 - Sair', 0
     vencedorMsg db 'parabens, voce venceu! :D', 0
 
     
@@ -143,19 +145,28 @@ telaDificuldade:
     ;mostra tela de dificuldade 
     ;facil, dificil ou retornar
     mov dl, 10
-    mov dh, 3
+    mov dh, 5
+    call andarEspaco
+    mov si, linha13
+    call printString
+
+    mov dl, 11
+    mov dh, 10
+    mov bl, 0xa ;cor verde claro
     call andarEspaco
     mov si, linha10
     call printString
 
-    mov dl, 10
-    mov dh, 6
+    mov dl, 11
+    mov dh, 13
+    mov bl, 0x4 ;cor vermelho
     call andarEspaco
     mov si, linha11
     call printString
 
-    mov dl, 10
-    mov dh, 9
+    mov dl, 11
+    mov dh, 16
+    mov bl, 0xe
     call andarEspaco
     mov si, linha12
     call printString
@@ -333,8 +344,8 @@ telaMenu:
     
     mov bl, 0xe
     ;posicionar título
-    mov dl, 7
-    mov dh, 5
+    mov dl, 6
+    mov dh, 6
     call andarEspaco
     mov si, titulo ;amarelo
     call printString
@@ -353,22 +364,22 @@ telaMenu:
 	mov [spriteH], ax
     call drawSprite
     
-    mov dl, 15
-    mov dh, 15
+    mov dl, 12
+    mov dh, 16
     mov bl, 0xa ;cor verde claro
     call andarEspaco
     mov si, jogar 
     call printString
     
     sub dl, 8
-    add dh, 2
+    add dh, 3
     call andarEspaco
     mov bl, 0x4 ;cor vermelho
     mov si, instrucoes
     call printString
     
     add dl, 3
-    add dh, 2
+    add dh, 3
     call andarEspaco
     mov bl, 0x9 ;cor azul claro
     mov si, creditos
@@ -807,16 +818,22 @@ drawSprite:
 errou:
     call cleanTela
 
-    mov dl, 5
-    mov dh, 7
+    mov dl, 14
+    mov dh, 10
     mov bl, 4
     call andarEspaco
     mov si, errouMsg
     call printString
 
-    mov dl, 5
-    mov dh, 9
-    mov bl, 2
+    mov dl, 11
+    mov dh, 13
+    call andarEspaco
+    mov si, errouMsg1
+    call printString
+
+    mov dl, 15
+    mov dh, 17
+    mov bl, 15
     call andarEspaco
     mov si, voltarMsg
     call printString
@@ -829,23 +846,23 @@ errou:
 
 acertou: 
     call cleanTela
-    mov dl, 5
-    mov dh, 7
+    mov dl, 10
+    mov dh, 6
     mov bl, 1
     call andarEspaco
     mov si, acertouMsg
     call printString
 
      
-    mov dl, 5
-    mov dh, 9
+    mov dl, 12
+    mov dh, 10
     mov bl, 14
     call andarEspaco
     mov si, proximoMsg
     call printString
 
-    mov dl, 5
-    mov dh, 12
+    mov dl, 12
+    mov dh, 13
     mov bl, 5
     call andarEspaco
     mov si, sairMsg
