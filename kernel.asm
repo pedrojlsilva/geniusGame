@@ -894,7 +894,7 @@ svez:
     
 delay1s:
 
-    mov cx, 0fh
+    mov cx, 0fh ;0f4240h
     mov dx, 4240h
     mov ah, 86h
     int 15h
@@ -902,10 +902,10 @@ delay1s:
 
 delay05s:
 
-    mov cx, 0x7
+    mov cx, 0x7 
     mov dx, 0x0120
     mov ah, 86h
-    int 10h
+    int 15h
     ret
     
 
